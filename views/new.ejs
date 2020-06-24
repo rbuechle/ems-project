@@ -1,0 +1,36 @@
+    <%- include ('header') -%>
+    <%- include ('navbar') -%>
+
+    <div role="main" class="container" style="width: 50%;">
+      <br />
+      <br />
+
+  <h2><%= message %></h2>
+
+    </br></br>
+
+    <form method="post" action="/process">
+      <div class="form-group">
+        <label for="txtFirstName">First Name:</label>
+        <input type="text" class="form-control" id="txtFirstName" name="txtFirstName" />
+      </div>
+      
+      <div class="form-group">
+        <label for="txtLastName">Last Name:</label>
+        <input type="text" class="form-control" id="txtLastName" name="txtLastName" />
+      </div>
+      
+        <!-- CSRF token -->
+        <input name="_csrf" value="<%= csrfToken %>" type="hidden" />
+
+        <button type="submit" class="btn btn-primary float-right">Submit</button>
+      </br></br>
+      </br></br>
+      </br></br>
+      </div>
+    </form>
+    <a href="list.ejs">Return to Employees</a>
+  </div>
+</div>
+
+<%- include('footer') -%>
